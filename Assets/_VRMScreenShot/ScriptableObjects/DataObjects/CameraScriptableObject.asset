@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdbe2c9bfac23c4b9951c3afa1febb7, type: 3}
+  m_Name: CameraScriptableObject
+  m_EditorClassIdentifier: 
+  _screenShotSize: {x: 1280, y: 720}
+  _bg1: {r: 0.02745098, g: 1, b: 0, a: 1}
+  _bg2: {r: 0, g: 0, b: 1, a: 1}
+  _bgRot: 36
+  _position: {x: 0, y: 1.4, z: 0}
+  _rotation: {x: 0, y: 180, z: 0}
+  _zoom: 0
+  _lookat: {x: 0, y: 1.4, z: 0}
+  _fov: 60
+  _isOrtho: 0
+  _orthoSize: 5
+  _isBloom: 0
+  _bloomThreshold: 1
+  _bloomIntensity: 2
+  _bloomColor: {r: 1, g: 1, b: 1, a: 1}
