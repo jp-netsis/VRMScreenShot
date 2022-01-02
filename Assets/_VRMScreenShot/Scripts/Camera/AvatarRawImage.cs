@@ -6,7 +6,7 @@ using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     [RequireComponent(typeof(RawImage))]
     public class AvatarRawImage : MonoBehaviour

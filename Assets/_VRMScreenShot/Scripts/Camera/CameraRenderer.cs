@@ -7,7 +7,7 @@ using SFB;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public partial class CameraRenderer : MonoBehaviour
     {

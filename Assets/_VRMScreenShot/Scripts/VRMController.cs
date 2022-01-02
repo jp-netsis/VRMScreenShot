@@ -7,9 +7,9 @@ using SFB;
 using UniGLTF;
 using UnityEngine;
 using VRM;
-using VRMScreenShot.UI;
+using jp.netsis.VRMScreenShot.UI;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public partial class VRMController : MonoBehaviour
     {

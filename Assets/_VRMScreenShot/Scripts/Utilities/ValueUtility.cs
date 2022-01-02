@@ -5,7 +5,7 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace VRMScreenShot.Utilities
+namespace jp.netsis.VRMScreenShot.Utilities
 {
     public class ValueUtility : MonoBehaviour
     {

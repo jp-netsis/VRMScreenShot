@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using VRM;
 
-namespace VRMScreenShot.UI
+namespace jp.netsis.VRMScreenShot.UI
 {
     public class LightControl : MonoBehaviour
     {

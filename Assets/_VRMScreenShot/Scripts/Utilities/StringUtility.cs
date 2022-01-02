@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace VRMScreenShot.Utilities
+namespace jp.netsis.VRMScreenShot.Utilities
 {
 public class StringUtility : MonoBehaviour
 {

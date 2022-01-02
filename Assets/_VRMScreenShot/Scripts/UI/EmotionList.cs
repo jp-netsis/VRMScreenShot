@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using VRM;
 
-namespace VRMScreenShot.UI
+namespace jp.netsis.VRMScreenShot.UI
 {
     public class EmotionList : MonoBehaviour
     {
@@ -32,7 +32,11 @@ namespace VRMScreenShot.UI
                 emotionSlider.name = $"ES_{name}"; // ES : Emote Slider
                 emotionSlider.SetValueWithoutNotify(0);
                 emotionSlider.OnEmotionSliderValueChange.AddListener(OnEmotionSliderValueChange);
-                emotionSlider.SetName(name,name);
+                string visibleName;
+                if (LocalizationSelectorScriptableObject.Instance.TryGetValue(name, out visibleName))
+                {
+                    emotionSlider.SetName(name,visibleName);
+                }
                 _emotionSliderList.Add(emotionSlider);
             }
         }

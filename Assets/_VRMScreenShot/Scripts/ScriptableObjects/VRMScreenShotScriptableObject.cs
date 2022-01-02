@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     [CreateAssetMenu(fileName = "VRMScreenShotScriptableObject",menuName = "VRMScreenShot/Create VRMScreenShotScriptableObject")]
     public class VRMScreenShotScriptableObject : ScriptableObject

@@ -9,9 +9,9 @@ using UniGLTF;
 using UnityEngine;
 using UnityEngine.Events;
 using VRM;
-using VRMScreenShot.UI;
+using jp.netsis.VRMScreenShot.UI;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public class VRMColorSelectController : MonoBehaviour
     {

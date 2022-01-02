@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8347914032087808871}
   - component: {fileID: 1776724708338504070}
   - component: {fileID: 5671770263868767027}
+  - component: {fileID: 7269097531968252778}
   m_Layer: 5
   m_Name: RotationZText (TMP)
   m_TagString: Untagged
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rot z
+  m_text: RotZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -270,6 +271,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7269097531968252778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872255732963774184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485250ce66eee7c4d8c7ab6f945f49a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2654429844159265229
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +495,7 @@ GameObject:
   - component: {fileID: 4317813571349900536}
   - component: {fileID: 402251608000317264}
   - component: {fileID: 2962072308052037861}
+  - component: {fileID: 8675384632732307482}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -606,6 +620,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8675384632732307482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4348493422493333353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485250ce66eee7c4d8c7ab6f945f49a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4413788029269347762
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +643,7 @@ GameObject:
   - component: {fileID: 6527708571955081350}
   - component: {fileID: 6790283327906840029}
   - component: {fileID: 3923522520909189945}
+  - component: {fileID: 9098664414488875828}
   m_Layer: 5
   m_Name: RotationXText (TMP)
   m_TagString: Untagged
@@ -672,7 +699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rot x
+  m_text: RotX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -741,6 +768,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9098664414488875828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413788029269347762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485250ce66eee7c4d8c7ab6f945f49a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4519254579350610813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2439,7 @@ GameObject:
   - component: {fileID: 3608700359975330043}
   - component: {fileID: 5443404075954835564}
   - component: {fileID: 4314037520168129916}
+  - component: {fileID: 6245043300242591050}
   m_Layer: 5
   m_Name: RotationYText (TMP)
   m_TagString: Untagged
@@ -2455,7 +2495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rot y
+  m_text: RotY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2524,6 +2564,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6245043300242591050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946186112278414379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485250ce66eee7c4d8c7ab6f945f49a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8130843193014121019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,7 +2892,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3760728109527180111, guid: 31cbaa220e8a9264e999da7de6d6e064, type: 3}
       propertyPath: m_text
-      value: 'Intensity :'
+      value: Intensity
       objectReference: {fileID: 0}
     - target: {fileID: 4918363937096682860, guid: 31cbaa220e8a9264e999da7de6d6e064, type: 3}
       propertyPath: m_AnchorMax.x

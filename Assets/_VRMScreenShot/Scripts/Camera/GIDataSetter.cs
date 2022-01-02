@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     [RequireComponent(typeof(Volume))]
     public class GIDataSetter : MonoBehaviour

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-namespace VRMScreenShot.UI
+namespace jp.netsis.VRMScreenShot.UI
 {
     [RequireComponent(typeof(Camera))]
     public class CameraMove : MonoBehaviour

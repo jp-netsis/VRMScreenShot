@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     [CreateAssetMenu(fileName = "OnColorChangedScriptableObject", menuName = "VRMScreenShot/Create OnColorChangedScriptableObject")]
     public class OnColorChangedScriptableObject : ScriptableObject

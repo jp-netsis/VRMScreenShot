@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public static class EnumExtension
     {

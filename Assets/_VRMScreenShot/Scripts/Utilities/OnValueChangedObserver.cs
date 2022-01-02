@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace VRMScreenShot.Utilities
+namespace jp.netsis.VRMScreenShot.Utilities
 {
     public class OnValueChangedObserver : MonoBehaviour
     {

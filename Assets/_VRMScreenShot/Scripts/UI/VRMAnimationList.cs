@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using VRM;
 
-namespace VRMScreenShot.UI
+namespace jp.netsis.VRMScreenShot.UI
 {
     public class VRMAnimationList : MonoBehaviour
     {
@@ -29,7 +29,9 @@ namespace VRMScreenShot.UI
 
             foreach (var animClip in _vrmScreenShotScriptableObject.AnimationClipArray)
             {
-                optionlist.Add(animClip.name);
+                string optionName;
+                LocalizationSelectorScriptableObject.Instance.TryGetValue(animClip.name, out optionName);
+                optionlist.Add(optionName);
                 _animationClipNameList.Add(animClip.name);
             }
 

@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4415f6f64025da544b0da2690e3b25fe, type: 3}
+  m_Name: en-US_LocalizationScriptableObject
+  m_EditorClassIdentifier: 
+  _localizationDictionary:
+    _list:
+    - Key: Apply
+      Value: Apply
+    - Key: Cancel
+      Value: Cancel
+    - Key: Unknown
+      Value: Unknown
+    - Key: Neutral
+      Value: Neutral
+    - Key: A
+      Value: A
+    - Key: I
+      Value: I
+    - Key: U
+      Value: U
+    - Key: E
+      Value: E
+    - Key: O
+      Value: O
+    - Key: Blink
+      Value: Blink
+    - Key: Joy
+      Value: Joy
+    - Key: Angry
+      Value: Angry
+    - Key: Sorrow
+      Value: Sorrow
+    - Key: Fun
+      Value: Fun
+    - Key: LookUp
+      Value: LookUp
+    - Key: LookDown
+      Value: LookDown
+    - Key: LookLeft
+      Value: LookLeft
+    - Key: LookRight
+      Value: LookRight
+    - Key: Blink_L
+      Value: Blink_L
+    - Key: Blink_R
+      Value: Blink_R
+    - Key: Idle
+      Value: Idle
+    - Key: AFK
+      Value: AFK
+    - Key: KISS
+      Value: Kiss
+    - Key: NADENADE
+      Value: Stroke
+    - Key: NG
+      Value: NG
+    - Key: OK
+      Value: OK
+    - Key: PosX
+      Value: PosX
+    - Key: PosY
+      Value: PosY
+    - Key: PosZ
+      Value: PosZ
+    - Key: RotX
+      Value: RotX
+    - Key: RotY
+      Value: RotY
+    - Key: RotZ
+      Value: RotZ
+    - Key: Intensity
+      Value: Intensity
+    - Key: Color
+      Value: Color
+    - Key: ScreenShot Size
+      Value: ScreenShot Size
+    - Key: BG1
+      Value: BG1
+    - Key: BG2
+      Value: BG2
+    - Key: BG Rot
+      Value: BG Rot
+    - Key: Is Orthographic
+      Value: Is Orthographic
+    - Key: Zoom
+      Value: Zoom
+    - Key: FOV
+      Value: FOV
+    - Key: Is Bloom
+      Value: Is Bloom
+    - Key: Bloom Threshold
+      Value: Bloom Threshold
+    - Key: Bloom Intensity
+      Value: Bloom Intensity
+    - Key: Reset Pos
+      Value: Reset Pos
+    - Key: Reset Rot
+      Value: Reset Rot

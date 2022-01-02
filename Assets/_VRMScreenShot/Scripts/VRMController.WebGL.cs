@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using VRM;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public partial class VRMController
     {

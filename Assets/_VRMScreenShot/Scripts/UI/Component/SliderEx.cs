@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace VRMScreenShot.UI
+namespace jp.netsis.VRMScreenShot.UI
 {
     [RequireComponent(typeof(Slider))]
     public class SliderEx : MonoBehaviour

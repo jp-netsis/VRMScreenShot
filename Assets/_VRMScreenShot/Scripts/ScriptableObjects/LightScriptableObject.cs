@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     [CreateAssetMenu(fileName = "LightScriptableObject", menuName = "VRMScreenShot/Create LightScriptableObject")]
     public class LightScriptableObject : OnValueChangedScriptableObject

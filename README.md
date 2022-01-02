@@ -29,6 +29,9 @@ https://github.com/gkngkc/UnityStandaloneFileBrowser/pull/116
 
 # Credits
 
+## Noto Sans Japanese Regular
+https://fonts.google.com/noto/specimen/Noto+Sans+JP
+
 ## ShaderGraphsMToonForURPVR
 https://github.com/simplestargame/ShaderGraphsMToonForURPVR
 

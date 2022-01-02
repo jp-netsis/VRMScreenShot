@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     [RequireComponent(typeof(Light))]
     public class LightDataSetter : MonoBehaviour

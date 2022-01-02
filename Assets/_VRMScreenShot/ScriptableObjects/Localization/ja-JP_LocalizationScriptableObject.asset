@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4415f6f64025da544b0da2690e3b25fe, type: 3}
+  m_Name: ja-JP_LocalizationScriptableObject
+  m_EditorClassIdentifier: 
+  _localizationDictionary:
+    _list:
+    - Key: Apply
+      Value: "\u6C7A\u5B9A"
+    - Key: Cancel
+      Value: "\u30AD\u30E3\u30F3\u30BB\u30EB"
+    - Key: Unknown
+      Value: "\u4E0D\u660E"
+    - Key: Neutral
+      Value: "\u6A19\u6E96"
+    - Key: A
+      Value: "\u3042"
+    - Key: I
+      Value: "\u3044"
+    - Key: U
+      Value: "\u3046"
+    - Key: E
+      Value: "\u3048"
+    - Key: O
+      Value: "\u304A"
+    - Key: Blink
+      Value: "\u76EE\u9589\u3058"
+    - Key: Joy
+      Value: "\u697D\u3057\u3044"
+    - Key: Angry
+      Value: "\u6012\u308A"
+    - Key: Sorrow
+      Value: "\u60B2\u3057\u307F"
+    - Key: Fun
+      Value: "\u559C\u3073"
+    - Key: LookUp
+      Value: "\u4E0A\u3092\u898B\u308B"
+    - Key: LookDown
+      Value: "\u4E0B\u3092\u898B\u308B"
+    - Key: LookLeft
+      Value: "\u5DE6\u3092\u898B\u308B"
+    - Key: LookRight
+      Value: "\u53F3\u3092\u898B\u308B"
+    - Key: Blink_L
+      Value: "\u76EE\u9589\u3058(\u5DE6)"
+    - Key: Blink_R
+      Value: "\u76EE\u9589\u3058(\u53F3)"
+    - Key: Idle
+      Value: "\u5F85\u6A5F"
+    - Key: AFK
+      Value: AFK
+    - Key: KISS
+      Value: "\u30AD\u30B9"
+    - Key: NADENADE
+      Value: "\u306A\u3067\u306A\u3067"
+    - Key: NG
+      Value: NG
+    - Key: OK
+      Value: OK
+    - Key: PosX
+      Value: "\u4F4D\u7F6EX"
+    - Key: PosY
+      Value: "\u4F4D\u7F6EY"
+    - Key: PosZ
+      Value: "\u4F4D\u7F6EZ"
+    - Key: RotX
+      Value: "\u56DE\u8EE2X"
+    - Key: RotY
+      Value: "\u56DE\u8EE2Y"
+    - Key: RotZ
+      Value: "\u56DE\u8EE2Z"
+    - Key: Intensity
+      Value: "\u5F37\u5EA6"
+    - Key: Color
+      Value: "\u8272"
+    - Key: ScreenShot Size
+      Value: "\u30B9\u30AF\u30EA\u30FC\u30F3\u30B7\u30E7\u30C3\u30C8\u30B5\u30A4\u30BA"
+    - Key: BG1
+      Value: "\u80CC\u666F1"
+    - Key: BG2
+      Value: "\u80CC\u666F2"
+    - Key: BG Rot
+      Value: "\u80CC\u666F\u56DE\u8EE2"
+    - Key: Is Orthographic
+      Value: "\u5E73\u884C\u6295\u5F71"
+    - Key: Zoom
+      Value: "\u30BA\u30FC\u30E0"
+    - Key: FOV
+      Value: "\u8996\u91CE"
+    - Key: Is Bloom
+      Value: "\u30D6\u30EB\u30FC\u30E0"
+    - Key: Bloom Threshold
+      Value: "\u3057\u304D\u3044\u5024"
+    - Key: Bloom Intensity
+      Value: "\u5F37\u5EA6"
+    - Key: Reset Pos
+      Value: "\u4F4D\u7F6E\u30EA\u30BB\u30C3\u30C8"
+    - Key: Reset Rot
+      Value: "\u56DE\u8EE2\u30EA\u30BB\u30C3\u30C8"

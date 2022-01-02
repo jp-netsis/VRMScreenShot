@@ -4,7 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public abstract class OnValueChangedScriptableObject : ScriptableObject
     {

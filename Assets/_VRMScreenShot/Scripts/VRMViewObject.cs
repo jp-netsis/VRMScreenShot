@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using VRM;
 
-namespace VRMScreenShot
+namespace jp.netsis.VRMScreenShot
 {
     public class VRMViewObject : MonoBehaviour
     {
