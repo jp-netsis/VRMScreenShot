@@ -50,11 +50,6 @@ namespace jp.netsis.VRMScreenShot
                 yield break;
             }
 
-            OnEnd(data);
-        }
-
-        void OnEnd(GltfData data)
-        {
             LoadAsync(data);
         }
         
@@ -79,7 +74,7 @@ namespace jp.netsis.VRMScreenShot
                 yield break;
             }
 
-            OnEnd(data);
+            LoadAsync(data);
         }
 
     }
