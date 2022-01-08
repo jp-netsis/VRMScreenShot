@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 namespace jp.netsis.VRMScreenShot.UI
 {
@@ -32,7 +30,12 @@ namespace jp.netsis.VRMScreenShot.UI
         
         //
         private float _mouseScrollY;
-        
+
+        private Vector2 _touchStartPos;
+        private Vector3 _camTouchStartRot;
+
+        private float _pinchBeginDistance;
+
         [SerializeField]
         private CameraScriptableObject _cameraScriptableObject;
 
@@ -48,12 +51,19 @@ namespace jp.netsis.VRMScreenShot.UI
             _initCameraFov = _cameraScriptableObject.FOV;
             _initIsOrtho = _cameraScriptableObject.IsOrtho;
             _initOrthoSize = _cameraScriptableObject.OrthoSize;
+
+            if (Application.isEditor)
+            {
+                TouchSimulation.Enable();
+            }
+            EnhancedTouchSupport.Enable();
         }
 
         void Update()
         {
             UpdateKeyboard();
             UpdateMouse();
+            UpdateTouch();
         }
 
         private void OnDisable()
@@ -65,6 +75,12 @@ namespace jp.netsis.VRMScreenShot.UI
             _cameraScriptableObject.FOV = _initCameraFov;
             _cameraScriptableObject.IsOrtho = _initIsOrtho;
             _cameraScriptableObject.OrthoSize = _initOrthoSize;
+            
+            if (Application.isEditor)
+            {
+                TouchSimulation.Disable();
+            }
+            EnhancedTouchSupport.Disable();
         }
 
         void UpdateKeyboard()
@@ -213,10 +229,82 @@ namespace jp.netsis.VRMScreenShot.UI
             var mouseScroll = Mouse.current.scroll.ReadValue();
             if (mouseScroll != Vector2.zero)
             {
+                _mouseScrollY = _cameraScriptableObject.Zoom;
                 _mouseScrollY += (mouseScroll.y * 0.0001f) * -1;
                 _mouseScrollY = Mathf.Clamp(_mouseScrollY, -3f, 0.7f);
                 _cameraScriptableObject.Zoom = _mouseScrollY;
             }
+        }
+
+        void UpdateTouch()
+        {
+            UpdateTouchSingle();
+            UpdateTouchMulti();
+        }
+
+        void UpdateTouchSingle()
+        {
+            if (Touch.activeFingers.Count == 0 || Touch.activeFingers.Count >= 2)
+            {
+                return;
+            }
+            var touch = Touch.activeFingers[0].currentTouch;
+            // Check if the mouse was clicked over a UI element
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began && IsPointerOverGameObject())
+            {
+                return;
+            }
+
+            Vector2 touchPos = touch.screenPosition;
+
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
+            {
+                _touchStartPos = touch.startScreenPosition;
+                _camTouchStartRot = _cameraScriptableObject.Rotation;
+            }
+
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Moved) 
+            {
+                float x = (_touchStartPos.x - touchPos.x) / Screen.width;
+                float y = (_touchStartPos.y - touchPos.y) / Screen.height;
+                _cameraScriptableObject.Rotation = new Vector3( _camTouchStartRot.x - y * 90f, _camTouchStartRot.y + x * 90f, 0);
+            }
+        }
+
+        void UpdateTouchMulti()
+        {
+            if (Touch.activeFingers.Count == 2)
+            {
+                // PinchInOut
+                var touch0 = Touch.activeFingers[0].currentTouch;
+                var touch1 = Touch.activeFingers[1].currentTouch;
+
+                if (touch1.phase == UnityEngine.InputSystem.TouchPhase.Began)
+                {
+                    _pinchBeginDistance = Vector2.Distance(touch0.screenPosition, touch1.screenPosition);
+                    _mouseScrollY = _cameraScriptableObject.Zoom;
+                }
+
+                if (!(touch0.phase == UnityEngine.InputSystem.TouchPhase.Moved || touch1.phase == UnityEngine.InputSystem.TouchPhase.Moved))
+                {
+                    return;
+                }
+                float distance = Vector2.Distance(touch0.screenPosition, touch1.screenPosition);
+                OnPinch(distance - _pinchBeginDistance);
+                _pinchBeginDistance = distance;
+
+            }
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="delta">0>delta:Pinch In(ZoomOut) 0<delta:Pinch Out(ZoomIn)</param>
+        void OnPinch(float delta)
+        {
+            _mouseScrollY += delta * 0.01f;
+            _mouseScrollY = Mathf.Clamp(_mouseScrollY, -3f, 0.7f);
+            _cameraScriptableObject.Zoom = _mouseScrollY;
         }
 
         bool IsPointerOverGameObject()
@@ -226,14 +314,13 @@ namespace jp.netsis.VRMScreenShot.UI
                 return true;
              
             //check touch
-            if(Touchscreen.current != null && 0 < Touchscreen.current.touches.Count)
+            if(0 < Touch.fingers.Count)
             {
-                if (EventSystem.current.IsPointerOverGameObject(Touchscreen.current.touches[0].touchId.ReadValue()))
+                if (EventSystem.current.IsPointerOverGameObject(Touch.fingers[0].index))
                 {
                     return true;
                 }
             }
-             
             return false;
         }
     }
