@@ -50,9 +50,14 @@ namespace jp.netsis.VRMScreenShot
                 yield break;
             }
 
-            LoadFromUrlAsync(data);
+            OnEnd(data);
         }
 
+        void OnEnd(GltfData data)
+        {
+            LoadAsync(data);
+        }
+        
         IEnumerator LoadFromUrl(string url)
         {
             byte[] binary;
@@ -74,30 +79,7 @@ namespace jp.netsis.VRMScreenShot
                 yield break;
             }
 
-            LoadFromUrlAsync(data);
-        }
-
-        async void LoadFromUrlAsync(GltfData data)
-        {
-            try
-            {
-                var vrm = new VRMData(data);
-                using (var loader = new VRMImporterContext(vrm, materialGenerator: new VRM.VRMMaterialDescriptorGenerator(vrm.VrmExtension)))
-                {
-                    var instance = await loader.LoadAsync();
-                    SetModel(instance);
-                }
-            }
-            catch (NotVrm0Exception)
-            {
-                // retry
-                Debug.LogWarning("file extension is vrm. but not vrm ?");
-                using (var loader = new UniGLTF.ImporterContext(data, materialGenerator: new GltfMaterialDescriptorGenerator()))
-                {
-                    var instance = await loader.LoadAsync();
-                    SetModel(instance);
-                }
-            }
+            OnEnd(data);
         }
 
     }

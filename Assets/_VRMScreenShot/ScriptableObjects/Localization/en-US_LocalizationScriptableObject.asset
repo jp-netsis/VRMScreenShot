@@ -92,6 +92,8 @@ MonoBehaviour:
       Value: BG Rot
     - Key: Is Orthographic
       Value: Is Orthographic
+    - Key: Ortho Size
+      Value: Ortho Size
     - Key: Zoom
       Value: Zoom
     - Key: FOV
@@ -106,3 +108,61 @@ MonoBehaviour:
       Value: Reset Pos
     - Key: Reset Rot
       Value: Reset Rot
+    - Key: Title
+      Value: Model name
+    - Key: Version
+      Value: Version
+    - Key: Author
+      Value: Author
+    - Key: Contact
+      Value: Author contact URL
+    - Key: Reference
+      Value: Reference
+    - Key: PermissionAct
+      Value: Permission of personality act
+    - Key: PermissionViolent
+      Value: Permission of violent act
+    - Key: PermissionSexual
+      Value: Permission of sexual act
+    - Key: PermissionCommercial
+      Value: Permission of using commercial content
+    - Key: PermissionOther
+      Value: Additional permission conditions
+    - Key: DistributionLicense
+      Value: License of distribution
+    - Key: DistributionOther
+      Value: Additional distribution conditions
+    - Key: PermissionAct0
+      Value: Only author
+    - Key: PermissionAct1
+      Value: Licensed users
+    - Key: PermissionAct2
+      Value: Everyone
+    - Key: PermissionUsage0
+      Value: Disallow
+    - Key: PermissionUsage1
+      Value: Allow
+    - Key: VRMLicenseType0
+      Value: Re-destribution prohibited
+    - Key: VRMLicenseType1
+      Value: No Rights Reserved (CC0)
+    - Key: VRMLicenseType2
+      Value: Licensed under CC BY 4.0
+    - Key: VRMLicenseType3
+      Value: Licensed under CC BY-NC 4.0
+    - Key: VRMLicenseType4
+      Value: Licensed under CC BY-SA 4.0
+    - Key: VRMLicenseType5
+      Value: Licensed under CC BY-NC-SA 4.0
+    - Key: VRMLicenseType6
+      Value: Licensed under CC BY-ND 4.0
+    - Key: VRMLicenseType7
+      Value: Licensed under CC BY-NC-ND 4.0
+    - Key: VRMLicenseType8
+      Value: Another License
+    - Key: Copy
+      Value: Copy
+    - Key: CopySuccess
+      Value: Copy Success!
+    - Key: Model Detail
+      Value: Model Detail

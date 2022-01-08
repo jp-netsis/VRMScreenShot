@@ -15,7 +15,7 @@ namespace jp.netsis.VRMScreenShot.UI
         private EmoteScriptableObject _emoteScriptableObject;
 
         private List<EmotionSlider> _emotionSliderList = new List<EmotionSlider>();
-
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -27,6 +27,10 @@ namespace jp.netsis.VRMScreenShot.UI
             _emotionSliderList.Clear();
             foreach (var preset in Enum.GetValues(typeof(BlendShapePreset)))
             {
+                if (IsDontShowPreset((BlendShapePreset)preset))
+                {
+                    continue;
+                }
                 string name = Enum.GetName(typeof(BlendShapePreset), preset);
                 var emotionSlider = Instantiate(_emotionSliderPrefab,transform);
                 emotionSlider.name = $"ES_{name}"; // ES : Emote Slider
@@ -40,6 +44,19 @@ namespace jp.netsis.VRMScreenShot.UI
                 _emotionSliderList.Add(emotionSlider);
             }
         }
+
+        bool IsDontShowPreset(BlendShapePreset preset)
+        {
+            switch (preset)
+            {
+                case BlendShapePreset.Unknown:
+                case BlendShapePreset.Neutral:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
 
         void OnEmotionSliderValueChange(string emotionName, float value)
         {

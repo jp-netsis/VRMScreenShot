@@ -8,6 +8,7 @@ using UniGLTF;
 using UnityEngine;
 using VRM;
 using jp.netsis.VRMScreenShot.UI;
+using UnityEngine.Events;
 
 namespace jp.netsis.VRMScreenShot
 {
@@ -23,7 +24,13 @@ namespace jp.netsis.VRMScreenShot
         private EmoteScriptableObject _emoteScriptableObject;
 
         [SerializeField]
+        private VRMMetaScriptableObject _loadedVRMMetaScriptableObject;
+
+        [SerializeField]
         private VRMAnimationList _animationList;
+        
+        [SerializeField]
+        private string _defaultVrmPath;
 
         [SerializeField]
         private Transform _vrmRoot;
@@ -32,10 +39,13 @@ namespace jp.netsis.VRMScreenShot
 
         private CancellationTokenSource _cancellationTokenSource;
 
+        public UnityEvent OnLoadVRMListener = new UnityEvent();
+
         private void OnEnable()
         {
             _cancellationTokenSource = new CancellationTokenSource();
             _animationList.OnInit(_vrmScreenShotScriptableObject,_animationScriptableObject);
+            OnOpenDefaultVRM();
         }
 
         void SafeDeleteRuntimeGltfInstance()
@@ -66,6 +76,11 @@ namespace jp.netsis.VRMScreenShot
                 _cancellationTokenSource.Dispose();
                 _cancellationTokenSource = null;
             }
+        }
+
+        void OnOpenDefaultVRM()
+        {
+            StartCoroutine(LoadVRMFromUrl(Path.Combine(Application.streamingAssetsPath, _defaultVrmPath)));
         }
 
         public void OnOpenVRM()
@@ -112,11 +127,18 @@ namespace jp.netsis.VRMScreenShot
                 return;
             }
 
+            LoadAsync(data);
+        }
+
+        async void LoadAsync(GltfData data)
+        {
             try
             {
                 var vrm = new VRMData(data);
                 using (var loader = new VRMImporterContext(vrm, materialGenerator: new VRM.VRMMaterialDescriptorGenerator(vrm.VrmExtension)))
                 {
+                    var meta = await loader.ReadMetaAsync();
+                    _loadedVRMMetaScriptableObject.VrmMetaObject = meta;
                     var instance = await loader.LoadAsync();
                     SetModel(instance);
                 }
@@ -130,7 +152,6 @@ namespace jp.netsis.VRMScreenShot
                     var instance = await loader.LoadAsync();
                     SetModel(instance);
                 }
-
             }
         }
 
@@ -155,6 +176,7 @@ namespace jp.netsis.VRMScreenShot
             yield return null; // wait 1F, can set proxy
             _emoteScriptableObject.OnValueChanged();
             _animationScriptableObject.OnValueChanged();
+            OnLoadVRMListener.Invoke();
         }
 
     }
